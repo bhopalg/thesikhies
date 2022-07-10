@@ -20,15 +20,19 @@
       font-size: 20px;
     }
 
-    .mint-button {
+    .mint-button, .qty-1, .qty-2 {
       background-color: rgb(25,51,82);
       color: #fff;
       border: 1px solid rgb(25,51,82);
       transition: 0.3s;
     }
 
-    .mint-button:hover {
+    .mint-button:hover, .qty-1:hover, .qty-2:hover {
       background-color: rgb(220,154,58);
+    }
+
+    .selected-qty {
+      background-color: rgb(220,154,58) !important;
     }
   }
 }

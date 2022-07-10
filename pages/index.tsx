@@ -9,6 +9,7 @@ import { ethers } from 'ethers';
 const Home: NextPage = () => {
     const [wallet, setWallet] = useState<string | null>(null);
     const [isConnected, setIsConnected] = useState(false);
+    const [qty, setQty] = useState(1);
 
     async function connectAccount() {
         if (window.ethereum) {
@@ -52,11 +53,20 @@ const Home: NextPage = () => {
 
       <main className={`${styles['main']} flex xl:flex-row flex-col justify-center items-center h-screen gap-20`}>
           <div className={`block ${styles['image-container']}`}>
-              <Image src={'/images/S3.png'} alt={'1'} layout={'responsive'} height={100} width={100}/>
+              <Image src={'/images/S3.png'} alt={'Sikh'} layout={'responsive'} height={100} width={100}/>
           </div>
           <div className={`${styles['mint-container']} flex flex-col`}>
               <h1 className={`${styles['title']}`}>𝔐𝔦𝔫𝔱 𝔶𝔬𝔲𝔯 𝔖𝔦𝔨𝔥</h1>
               <div className={`${styles['supply']} mt-5`}>200/5555</div>
+              <div className={`${styles['quantity-container']} mt-5 flex xl:flex-row flex-col justify-around`}>
+                  <button className={
+                      `inline-flex items-center px-6 py-5 text-base font-medium rounded-md shadow-sm justify-center ${styles['qty-1']} ${qty === 1 ? styles['selected-qty'] : ''}`
+                  }
+                  onClick={() => setQty(1)}>1</button>
+                  <button
+                      className={`inline-flex items-center px-6 py-5 text-base font-medium rounded-md shadow-sm justify-center ${styles['qty-2']} ${qty === 2 ? styles['selected-qty'] : ''}`}
+                      onClick={() => setQty(2)}>2</button>
+              </div>
               <button
                   type="button"
                   className={`mt-5 inline-flex items-center px-6 py-5 text-base font-medium rounded-md shadow-sm justify-center ${styles['mint-button']}`}
