@@ -56,7 +56,7 @@ const Home: NextPage = () => {
               <Image src={'/images/S3.png'} alt={'Sikh'} layout={'responsive'} height={100} width={100}/>
           </div>
           <div className={`${styles['mint-container']} flex flex-col`}>
-              <h1 className={`${styles['title']}`}>𝔐𝔦𝔫𝔱 𝔶𝔬𝔲𝔯 𝔖𝔦𝔨𝔥</h1>
+              <h1 className={`${styles['title']}`}>Mint Your Sikh</h1>
               <div className={`${styles['supply']} mt-5`}>200/5555</div>
               <div className={`${styles['quantity-container']} mt-5 flex xl:flex-row flex-col justify-around`}>
                   <button className={
